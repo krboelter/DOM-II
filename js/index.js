@@ -31,3 +31,31 @@ paragraphs.forEach(n => n.addEventListener("click", event => {
 }));
 
 // ***four***
+let colors = ["red", "blue", "green", "orange", "purple", "black"]
+let heading1 = document.querySelector("header h2");
+
+heading1.addEventListener("wheel", () => {
+    heading1.style.color = colors[Math.floor(Math.random() * colors.length)];
+});
+
+// ***five***
+let bgColors = ["red", "blue", "green", "orange", "purple", "white"]
+let webBG = document.querySelector("body");
+
+webBG.addEventListener("keydown", () => {
+    webBG.style.background = bgColors[Math.floor(Math.random() * bgColors.length)];
+});
+
+// ***six***
+window.addEventListener("load", event => {
+    alert("Welcome to our website! Press any key to change the background.");
+});
+
+// ***seven***
+let images = Array.from(document.getElementsByTagName("img"));
+
+images.forEach(n => n.addEventListener("dblclick", (event) => {
+    event.target.src = "https://rand.cat/pic";
+}));
+
+// ***eight***
