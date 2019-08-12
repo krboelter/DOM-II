@@ -68,11 +68,14 @@ buttons.forEach(n => n.addEventListener("dblclick", () => {
 
 // ***nine***
 let newParagraph = document.createElement("p");
+let destination = document.querySelector(".destination");
 
-buttons.forEach(n => n.addEventListener("click", event => {
-    
-    for (let i = 0; i < 3; i ++) {
-        let num = 0;
-        event.target.appendChild("p");
-    }
+buttons.forEach(n => n.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.target.textContent = "Not Available";
 }));
+
+// ***ten***
+buttons.addEventListener("focus", event => {
+    event.target.style.color = "red";
+})
