@@ -76,6 +76,9 @@ buttons.forEach(n => n.addEventListener("click", (event) => {
 }));
 
 // ***ten***
-buttons.addEventListener("focus", event => {
-    event.target.style.color = "red";
-})
+buttons.addEventListener("cut", event => {
+    const selection = document.getSelection();
+    event.clipboardData.setData('text/plain', selection.toString().toUpperCase());
+    selection.deleteFromDocument();
+    event.preventDefault();
+});
