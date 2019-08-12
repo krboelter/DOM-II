@@ -59,3 +59,20 @@ images.forEach(n => n.addEventListener("dblclick", (event) => {
 }));
 
 // ***eight***
+let buttons = Array.from(document.getElementsByClassName("btn"));
+
+buttons.forEach(n => n.addEventListener("dblclick", () => {
+    // event.preventDefault();
+    window.alert("Button has been pressed");
+}));
+
+// ***nine***
+let newParagraph = document.createElement("p");
+
+buttons.forEach(n => n.addEventListener("click", event => {
+    
+    for (let i = 0; i < 3; i ++) {
+        let num = 0;
+        event.target.appendChild("p");
+    }
+}));
